@@ -29,7 +29,7 @@ export class WalletOptions{
 	checkMinerTx:boolean = false;
 	readSpeed:number = 10;
 	customNode:boolean = false;
-	nodeUrl:string = 'http://node.dogemone.online:53000/';
+	nodeUrl:string = 'https://node.dogemone.online:52000/';
 
 	static fromRaw(raw : RawWalletOptions){
 		let options = new WalletOptions();

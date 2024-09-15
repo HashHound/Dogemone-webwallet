@@ -4,11 +4,11 @@ var myGlobal = typeof window !== 'undefined' ? window : self;
 myGlobal.config = {
     debug: false,
     nodeList: [
-        "http://node.dogemone.online:53000/"],
+        "https://node.dogemone.online:52000/"],
     apiUrl: [
-        "http://node.dogemone.online:53000/"
+        "https://node.dogemone.online:52000/"
     ],
-    nodeUrl: "http://node.dogemone.online:53000/",
+    nodeUrl: "https://node.dogemone.online:52000/",
     mainnetExplorerUrl: "https://explorer.dogemone.online/",
     mainnetExplorerUrlHash: "https://explorer.dogemone.online/?hash={ID}#blockchain_transaction",
     mainnetExplorerUrlBlock: "https://explorer.dogemone.online/?hash={ID}#blockchain_block",
