@@ -15,8 +15,8 @@
 
 export class CoinUri{
 
-	static coinTxPrefix = 'karbowanec:';
-	static coinWalletPrefix = 'karbowanec:';
+	static coinTxPrefix = 'dogemone:';
+	static coinWalletPrefix = 'dogemone:';
 	static coinAddressLength = 95;
 
 	static decodeTx(str : string) : {

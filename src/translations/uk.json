@@ -109,7 +109,7 @@
 		"emptyWallet": "У цьому гаманці поки немає коштів.",
 		"waitSync": "Будь ласка, зачекайте гаманець оновлює дані",
 		"beReallyPatient": "Початкова установка може зайняти деякий час...",
-		"getCoinAddress": "Отримати KRB"
+		"getCoinAddress": "Отримати DME"
 	  },
 	  "txDetails":{
 		"title":"Деталі транзакції",
@@ -169,8 +169,8 @@
 		}
 	  },
 	  "disclaimerBlock":{
-		"title":"Ризики використання KarboWallet",
-		"content":"KarboWallet це веб-інтерфейс. Він допомагає вам використовувати Карбо без необхідності тримати повний вузол мережі Карбо. <br/>Ми рекомендуємо ставитися до KarboWallet з усією серйозністю, як до вашого гаманця."
+		"title":"Ризики використання DogemoneWallet",
+		"content":"DogemoneWallet це веб-інтерфейс. Він допомагає вам використовувати Карбо без необхідності тримати повний вузол мережі Карбо. <br/>Ми рекомендуємо ставитися до DogemoneWallet з усією серйозністю, як до вашого гаманця."
 	  }
 	},
 	"donatePage":{
@@ -191,7 +191,7 @@
 	  "getInTouchBlock":{
 		"title":"Зв'яжіться з нами!",
 		"content":"Якщо у вас виникли проблеми з гаманцем, напишіть нам!",
-		"discord":"Канал Karbo в Discord"
+		"discord":"Канал Dogemone в Discord"
 	  }
 	},
 	"forgotPasswordPage":{
@@ -214,7 +214,7 @@
 	  }
 	},
 	"sendPage":{
-	  "title":"Надіслати KRB",
+	  "title":"Надіслати DME",
 	  "sendBlock":{
 		"address":{
 		  "label":"Адреса одержувача",
@@ -286,7 +286,7 @@
 	  }
 	},
 	"receivePage":{
-	  "title":"Отримати KRB",
+	  "title":"Отримати DME",
 	  "receiveBlock":{
 		"address":{
 		  "title":"Ваша адреса для отримання:",
@@ -314,7 +314,7 @@
 	},
 	"miningPage":{
 	  "title":"Інформація про майнінг",
-	  "subtitle":"Підтримайте мережу майнінгом і отримайте в нагороду KRB",
+	  "subtitle":"Підтримайте мережу майнінгом і отримайте в нагороду DME",
 	  "parameterBlock":{
 		"title":"Параметри",
 		"labelDestinationAddress":"Гаманець на який майнити",
@@ -328,7 +328,7 @@
 		"hashrate":"Хешрейт",
 		"maxHashrate":"Макс. Хешрейт",
 		"dedicatedHardware":"Майнінг допомагає в децентралізації мережі і дозволяє вам заробити карбованці.",
-		"miningHandledBy":"Майнінг проходить на пулі pool.karbowanec.com"
+		"miningHandledBy":"Майнінг проходить на пулі pool.dogemonewanec.com"
 	  }
 	},
 	"settingsPage":{

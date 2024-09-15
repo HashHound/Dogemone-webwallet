@@ -330,7 +330,7 @@
         "hashrate": "해시레이트",
         "maxHashrate": "최고 해시레이트",
         "dedicatedHardware": "채굴용 소프트웨어와 하드웨어를 사용하면, 더 많은 코인을 받을 수 있으며, 네트워크의 탈중앙화에 도움이 됩니다.",
-        "miningHandledBy": "이 채굴 작업은 pool.karbowanec.com에서 처리됩니다."
+        "miningHandledBy": "이 채굴 작업은 pool.dogemonewanec.com에서 처리됩니다."
       }
     },
     "settingsPage": {

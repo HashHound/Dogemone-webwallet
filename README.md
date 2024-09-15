@@ -1,6 +1,6 @@
-# Karbo Web Wallet - Fully client-side
+# Dogemone Web Wallet - Fully client-side
 This web wallet is doing everything client-side to give the best privacy to users.
-It is communicating with the daemon directly and is served from Githup pages.
+It is communicating with the daemon directly and is served from Github pages.
 
 # Security
 **No keys, seeds, or sensitive data is sent to the server**  
@@ -45,14 +45,12 @@ Developers:
 - Ukrainian: [Aiwe](https://github.com/aivve)
 
 # Contributing
-- You can help Karbo by translation the wallet in your native language, it's really easy!  
+- You can help Dogemone by translation the wallet in your native language, it's really easy!  
 Read [the translations guide](TRANSLATIONS.md) to get instructions on how to do that
-- Report bugs & ideas to help us improve the web wallet by opening an issue 
-- [Make a donation to Karbo](https://wallet.karbo.org/#!donate)
+- Report bugs & ideas to help us improve the web wallet by opening an issue
+- [Make a donation to Dogemone](https://wallet.dogemone.online/#!donate)
 
 # Forks / Other Coins
 It was forked from Masari project. We have been receiving multiple coin developers help to fork it. As the time required to develop this project is heavy, please consider giving a mention to this project if you fork it.
 
 The code is readable, it should be enough for you to use it.
-
-

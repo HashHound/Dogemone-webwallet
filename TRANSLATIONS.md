@@ -15,5 +15,5 @@ Disable this security, I understand the risk
 - If you need to use double quotes (") in your text, please put a \ before it.
 
 # Submitting translations
-- Send us your translation by opening an [issue](https://github.com/Karbovanets/karbo-webwallet-js/issues) on Github or sending it to us directly to the [email](dev@karbo.io)
+- Send us your translation by opening an [issue](https://github.com/Dogemonevanets/dogemone-webwallet/issues) on Github or sending it to us directly to the [email](dev@dogemone.io)
 - You can also fork your own repo and make changes, then submit a Pull Request

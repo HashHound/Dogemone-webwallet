@@ -552,13 +552,13 @@ export class TransactionsExplorer {
 
 			console.log("Selected outs:", usingOuts);
 
-			console.log('using amount of ' + usingOuts_amount + ' for sending ' + totalAmountWithoutFee + ' with fees of ' + (neededFee / Math.pow(10, config.coinUnitPlaces)) + ' KRB');
+			console.log('using amount of ' + usingOuts_amount + ' for sending ' + totalAmountWithoutFee + ' with fees of ' + (neededFee / Math.pow(10, config.coinUnitPlaces)) + ' DME');
 			confirmCallback(totalAmountWithoutFee, neededFee).then(function () {
 				if (usingOuts_amount.compare(totalAmount) < 0) {
 					console.log("Not enough spendable outputs / balance too low (have "
 						+ Cn.formatMoneyFull(usingOuts_amount) + " but need "
 						+ Cn.formatMoneyFull(totalAmount)
-						+ " (estimated fee " + Cn.formatMoneyFull(neededFee) + " KRB included)");
+						+ " (estimated fee " + Cn.formatMoneyFull(neededFee) + " DME included)");
 					// return;
 					reject({error: 'balance_too_low'});
 					return;
@@ -572,11 +572,11 @@ export class TransactionsExplorer {
 						amount: changeAmount
 					});
 				} /*
-				// not applicable for Karbo
+				// not applicable for Dogemone
 				else if (usingOuts_amount.compare(totalAmount) === 0) {
 					//create random destination to keep 2 outputs always in case of 0 change
 					let fakeAddress = Cn.create_address(CnRandom.random_scalar()).public_addr;
-					console.log("Sending 0 KRB to a fake address to keep tx uniform (no change exists): " + fakeAddress);
+					console.log("Sending 0 DME to a fake address to keep tx uniform (no change exists): " + fakeAddress);
 					dsts.push({
 						address: fakeAddress,
 						amount: 0

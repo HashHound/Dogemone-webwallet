@@ -3,40 +3,37 @@ let myGlobal : any = typeof window !== 'undefined' ? window : self;
 myGlobal.config = {
 	debug: false,
 	nodeList: [
-		"https://karbo.club:32448/",
-		"https://node.karbo.org:32448/",
-		"https://node.karbo.io:32448/"
-	],
+		"https://node.dogemone.online:52000"],
 	apiUrl: [
-		"https://node.karbo.io:32448/"
+		"https://node.dogemone.online:52000/"
 	],
-	nodeUrl: "https://node.karbo.org:32448/",
-	mainnetExplorerUrl: "http://explorer.karbowanec.com/",
-	mainnetExplorerUrlHash: "http://explorer.karbowanec.com/?hash={ID}#blockchain_transaction",
-	mainnetExplorerUrlBlock: "http://explorer.karbowanec.com/?hash={ID}#blockchain_block",
-	testnetExplorerUrl: "http://testnet.karbo.org/",
-	testnetExplorerUrlHash: "http://testnet.karbo.org/?hash={ID}#blockchain_transaction",
-	testnetExplorerUrlBlock: "http://testnet.karbo.org/?hash={ID}#blockchain_block",
+	nodeUrl: "https://node.dogemone.online:52000/",
+	mainnetExplorerUrl: "https://explorer.dogemone.online/",
+	mainnetExplorerUrlHash: "https://explorer.dogemone.online/?hash={ID}#blockchain_transaction",
+	mainnetExplorerUrlBlock: "https://explorer.dogemone.online/?hash={ID}#blockchain_block",
+	testnetExplorerUrl: "http://testnet.dogemone.online/",
+	testnetExplorerUrlHash: "http://testnet.dogemone.online/?hash={ID}#blockchain_transaction",
+	testnetExplorerUrlBlock: "http://testnet.dogemone.online/?hash={ID}#blockchain_block",
 	testnet: false,
 	coinUnitPlaces: 12,
 	coinDisplayUnitPlaces: 2,
 	txMinConfirms: 5,
 	txCoinbaseMinConfirms: 10,
-	addressPrefix: 111,
+	addressPrefix: 27355,
 	integratedAddressPrefix: 112,
-	addressPrefixTestnet: 111,
+	addressPrefixTestnet: 27355,
 	integratedAddressPrefixTestnet: 112,
 	subAddressPrefix: 113,
 	subAddressPrefixTestnet: 113,
-	coinFee: new JSBigInt('10000000000'),
+	coinFee: new JSBigInt('100000000000'),
 	dustThreshold: new JSBigInt('100000000'),//used for choosing outputs/change - we decompose all the way down if the receiver wants now regardless of threshold
 	defaultMixin: 3, // default value mixin
 	syncBlockCount: 1000,
-	coinSymbol: 'KRB',
-	openAliasPrefix: "krb",
-	coinName: 'Karbo',
-	coinUriPrefix: 'karbowanec:',
-	avgBlockTime: 240,
+	coinSymbol: 'DME',
+	openAliasPrefix: "dme",
+	coinName: 'Dogemone',
+	coinUriPrefix: 'dogemone:',
+	avgBlockTime: 60,
 	maxBlockNumber: 500000000,
 };
 

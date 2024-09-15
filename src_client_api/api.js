@@ -16,7 +16,7 @@
 var MasariApi = new function(){
 
 	this.ready = false;
-	this.apiDomain = 'http://localhost:38090';
+	this.apiDomain = 'http://localhost:53000';
 	this.timeoutErrorTime = 10000;
 	this.timeoutError = 10000;
 
@@ -90,7 +90,7 @@ var MasariApi = new function(){
 		if(typeof options.description !== 'undefined')url += 'txDesc='+options.description+'&';
 		if(typeof options.destName !== 'undefined')url += 'destName='+options.destName+'&';
 
-		window.open(url,"Karbo",this.popupParameters);
+		window.open(url,"Dogemone",this.popupParameters);
 
 		return Promise.resolve();
 	};

@@ -1,7 +1,7 @@
 {
-  "name": "karbowebwallet",
+  "name": "dogemonewebwallet",
   "version": "1.1.1",
-  "description": "Fully client-side web-wallet for Karbo",
+  "description": "Fully client-side web-wallet for Dogemone",
   "scripts": {
     "start": "serve .\\src\\",
     "build": "node ./node_modules/typescript/bin/tsc --project tsconfig.prod.json && node build.js && serve .\\src\\",
@@ -15,12 +15,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Karbovanets/karbo-webwallet-js.git"
+    "url": "git+https://github.com/HashHound/Dogemone-webwallet.git"
   },
   "author": "Gnock,Aiwe,Alex,ExploShot",
   "license": "BSD-3",
   "bugs": {
-    "url": "https://github.com/Karbovanets/Karbo-webwallet-js/issues"
+    "url": "https://github.com/HashHound/Dogemone-webwallet/issues"
   },
-  "homepage": "https://github.com/Karbovanets/Karbo-webwallet-js#readme"
+  "homepage": "https://github.com/HashHound/Dogemone-webwallet#readme"
 }

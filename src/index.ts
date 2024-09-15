@@ -222,18 +222,18 @@ promiseLoadingReady.then(function(){
 //========================================================
 //only install the service on web platforms and not native
 
-console.log(`%c                                            
- .d8888b.  888                       888    
-d88P  Y88b 888                       888    
-Y88b.      888                       888    This is a browser feature intended for 
- "Y888b.   888888  .d88b.  88888b.   888    developers. If someone told you to copy-paste 
-    "Y88b. 888    d88""88b 888 "88b  888    something here to enable a feature 
-      "888 888    888  888 888  888  Y8P    or "hack" someone\'s account, it is a 
-Y88b  d88P Y88b.  Y88..88P 888 d88P         scam and will give them access to your 
- "Y8888P"   "Y888  "Y88P"  88888P"   888    Karbo Wallet!
-                           888              
-                           888              
-                           888              
+console.log(`%c
+ .d8888b.  888                       888
+d88P  Y88b 888                       888
+Y88b.      888                       888    This is a browser feature intended for
+ "Y888b.   888888  .d88b.  88888b.   888    developers. If someone told you to copy-paste
+    "Y88b. 888    d88""88b 888 "88b  888    something here to enable a feature
+      "888 888    888  888 888  888  Y8P    or "hack" someone\'s account, it is a
+Y88b  d88P Y88b.  Y88..88P 888 d88P         scam and will give them access to your
+ "Y8888P"   "Y888  "Y88P"  88888P"   888    Dogemone Wallet!
+                           888
+                           888
+                           888
 
 IA Self-XSS scam tricks you into compromising your wallet by claiming to provide a way to log into someone else's wallet, or some other kind of reward, after pasting a special code or link into your web browser.`, "font-family:monospace")
 

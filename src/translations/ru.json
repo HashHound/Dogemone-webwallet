@@ -109,7 +109,7 @@
 		"emptyWallet": "В этом кошельке пока нет средств.",
 		"waitSync": "Пожалуйста подождите пока кошелек обновляется",
 		"beReallyPatient": "Начальная установка может занять некоторое время...",
-		"getCoinAddress": "Получить KRB"
+		"getCoinAddress": "Получить DME"
 	  },
 	  "txDetails":{
 		"title":"Детали транзакции",
@@ -169,8 +169,8 @@
 		}
 	  },
 	  "disclaimerBlock":{
-		"title":"Риски использования KarboWallet",
-		"content":"KarboWallet это веб-интерфейс. Он помогает вам использовать Карбо без необходимости держать полный узел сети Карбо. <br/>Мы рекомендуем относиться к KarboWallet со всей серьезностью, как к вашему бумажнику."
+		"title":"Риски использования DogemoneWallet",
+		"content":"DogemoneWallet это веб-интерфейс. Он помогает вам использовать Карбо без необходимости держать полный узел сети Карбо. <br/>Мы рекомендуем относиться к DogemoneWallet со всей серьезностью, как к вашему бумажнику."
 	  }
 	},
 	"donatePage":{
@@ -191,7 +191,7 @@
 	  "getInTouchBlock":{
 		"title":"Свяжитесь с нами!",
 		"content":"Если у вас возникли проблемы с кошельком, напишите нам!",
-		"discord":"Канал Karbo в Discord"
+		"discord":"Канал Dogemone в Discord"
 	  }
 	},
 	"forgotPasswordPage":{
@@ -203,7 +203,7 @@
 	},
 	"networkPage":{
 	  "title":"Статистика сети",
-	  "subtitle":"Обзор сети Karbo",
+	  "subtitle":"Обзор сети Dogemone",
 	  "statsBlock":{
 	    "connectNode": "Подключено к узлу",
 		"hashrate":"Хешрейт",
@@ -214,7 +214,7 @@
 	  }
 	},
 	"sendPage":{
-	  "title":"Отправить KRB",
+	  "title":"Отправить DME",
 	  "sendBlock":{
 		"address":{
 		  "label":"Адрес получателя",
@@ -249,7 +249,7 @@
 	  },
 	  "thankYouDonationModal":{
 		"title":"Спасибо за ваше пожертвование!",
-		"content":"Мы ценим вашу поддержку. <br/>Это пожертвование поможет сделать Karbo лучше",
+		"content":"Мы ценим вашу поддержку. <br/>Это пожертвование поможет сделать Dogemone лучше",
 		"confirmText":"OK"
 	  },
 	  "transferSentModal":{
@@ -286,7 +286,7 @@
 	  }
 	},
 	"receivePage":{
-	  "title":"Получить KRB",
+	  "title":"Получить DME",
 	  "receiveBlock":{
 		"address":{
 		  "title":"Ваш адрес для получения:",
@@ -314,7 +314,7 @@
 	},
 	"miningPage":{
 	  "title":"Информация о майнинге",
-	  "subtitle":"Поддержите сеть майнингом и получите в награду KRB",
+	  "subtitle":"Поддержите сеть майнингом и получите в награду DME",
 	  "parameterBlock":{
 		"title":"Параметры",
 		"labelDestinationAddress":"Кошелек на который майнить",
@@ -327,8 +327,8 @@
 		"validShares":"Валидные доли",
 		"hashrate":"Хешрейт",
 		"maxHashrate":"Макс. Хешрейт",
-		"dedicatedHardware":"Майнинг помогает в децентрализации сети и позволяет вам заработать Karbo.",
-		"miningHandledBy":"Майнинг проходит на пуле pool.karbowanec.com"
+		"dedicatedHardware":"Майнинг помогает в децентрализации сети и позволяет вам заработать Dogemone.",
+		"miningHandledBy":"Майнинг проходит на пуле pool.dogemonewanec.com"
 	  }
 	},
 	"settingsPage":{

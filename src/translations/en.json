@@ -1,7 +1,7 @@
 {
   "website":{
-	"title":"Karbo Wallet",
-	"description":"Official online wallet for Karbo currency - fully handled in your browser for optimal security"
+	"title":"Dogemone Wallet",
+	"description":"Official online wallet for Dogemone currency - fully handled in your browser for optimal security"
   },
   "messages": {
 	"menu": {
@@ -64,8 +64,8 @@
 	  "github": "GitHub"
 	},
 	"homepage": {
-	  "mainTitle": "Welcome to Karbo Wallet",
-	  "tagLine": "The simplest way to use Karbo – anywhere and any time",
+	  "mainTitle": "Welcome to Dogemone Wallet",
+	  "tagLine": "The simplest way to use Dogemone – anywhere and any time",
 	  "actions": {
 		"loadWallet": "Load my wallet",
 		"importWallet": "Import a wallet",
@@ -109,7 +109,7 @@
 		"emptyWallet": "You currently have no funds in this wallet.",
 		"waitSync": "Please wait until the wallet is updated",
 		"beReallyPatient": "The initial setup can take some time...",
-		"getCoinAddress": "Receive KRB"
+		"getCoinAddress": "Receive DME"
 	  },
 	  "txDetails":{
 		"title":"Transaction details",
@@ -146,7 +146,7 @@
 	  },
 	  "finalizationStep":{
 		"title":"That was simple. Your account is ready!",
-		"subtitle":"Be ready to use Karbo like you never have",
+		"subtitle":"Be ready to use Dogemone like you never have",
 		"passwordSelectionBlock":{
 		  "label":"Protect your wallet"
 		},
@@ -169,8 +169,8 @@
 		}
 	  },
 	  "disclaimerBlock":{
-		"title":"Risk of Using KarboWallet",
-		"content":"KarboWallet is a web-based interface. It helps you use Karbo without running a full Karbo node. <br/>We recommend you treat KarboWallet like you will treat your actual wallet."
+		"title":"Risk of Using DogemoneWallet",
+		"content":"DogemoneWallet is a web-based interface. It helps you use Dogemone without running a full Dogemone node. <br/>We recommend you treat DogemoneWallet like you will treat your actual wallet."
 	  }
 	},
 	"donatePage":{
@@ -181,8 +181,8 @@
 		"content":"If you want to help to pay for the servers, to support new features development, and like this app, please consider a donation: <br/><br/>"
 	  },
 	  "devFundBlock":{
-		"title":"Karbo Dev fund",
-		"content":"To help Karbo, you can donate at these addresses"
+		"title":"Dogemone Dev fund",
+		"content":"To help Dogemone, you can donate at these addresses"
 	  }
 	},
 	"supportPage":{
@@ -191,7 +191,7 @@
 	  "getInTouchBlock":{
 		"title":"Let's Get In Touch!",
 		"content":"If you have any problems with your wallet, contact us!",
-		"discord":"Karbo Discord Channel"
+		"discord":"Dogemone Discord Channel"
 	  }
 	},
 	"forgotPasswordPage":{
@@ -203,7 +203,7 @@
 	},
 	"networkPage":{
 	  "title":"Network stats",
-	  "subtitle":"Insights on the Karbo network",
+	  "subtitle":"Insights on the Dogemone network",
 	  "statsBlock":{
 		"connectNode": "Connected to node",
 		"hashrate":"Network hashrate",
@@ -214,7 +214,7 @@
 	  }
 	},
 	"sendPage":{
-	  "title":"Send KRB",
+	  "title":"Send DME",
 	  "sendBlock":{
 		"address":{
 		  "label":"Destination address",
@@ -249,7 +249,7 @@
 	  },
 	  "thankYouDonationModal":{
 		"title":"Thank you for your donation!",
-		"content":"Your help is appreciated. <br/>This donation will help make Karbo better",
+		"content":"Your help is appreciated. <br/>This donation will help make Dogemone better",
 		"confirmText":"OK"
 	  },
 	  "transferSentModal":{
@@ -286,7 +286,7 @@
 	  }
 	},
 	"receivePage":{
-	  "title":"Receive KRB",
+	  "title":"Receive DME",
 	  "receiveBlock":{
 		"address":{
 		  "title":"Your address to receive funds:",
@@ -314,7 +314,7 @@
 	},
 	"miningPage":{
 	  "title":"Mine directly in your browser",
-	  "subtitle":"Support the network by mining and be rewarded with KRB",
+	  "subtitle":"Support the network by mining and be rewarded with DME",
 	  "parameterBlock":{
 		"title":"Parameters",
 		"labelDestinationAddress":"Wallet to mine",

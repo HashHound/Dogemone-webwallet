@@ -24,7 +24,7 @@ export class WalletRepository{
 			return wallet !== null;
 		});
 	}
-	
+
 	static decodeWithPassword(rawWallet : RawWallet|RawFullyEncryptedWallet, password : string) : Wallet|null{
 		if(password.length > 32)
 			password = password.substr(0 , 32);
@@ -87,7 +87,7 @@ export class WalletRepository{
 			}
 		});
 	}
-	
+
 	static save(wallet : Wallet, password : string) : Promise<void>{
 		return Storage.setItem('wallet', JSON.stringify(this.getEncrypted(wallet, password)));
 	}
@@ -194,25 +194,25 @@ export class WalletRepository{
 		doc.setTextColor(255, 255, 255);
 		doc.setFontSize(10);
 		doc.text(110, 120, "To deposit funds to this paper wallet, send ");
-		doc.text(110, 125, "Karbo to the public address");
+		doc.text(110, 125, "Dogemone to the public address");
 
 		doc.text(110, 135, "DO NOT REVEAL THE PRIVATE KEY");
 
-		//adding karbo logo
-		let c : HTMLCanvasElement|null = <HTMLCanvasElement>document.getElementById('canvasExport');
-		if(c !== null) {
-			let ctx = c.getContext("2d");
-			let img: ImageBitmap | null = <ImageBitmap | null>document.getElementById("verticalLogo");
-			if (ctx !== null && img !== null) {
-				c.width = img.width;
-				c.height = img.height;
-				ctx.drawImage(img, 0, 0);
+		//adding Dogemone logo
+		let c = document.getElementById('canvasExport');
+if (c !== null) {
+    let ctx = c.getContext("2d");
+    let img = document.getElementById("dogemoneLogo");
+    if (ctx !== null && img !== null) {
+        c.width = img.width;
+        c.height = img.height;
+        ctx.drawImage(img, 0, 0);
 
-				let ratio = img.width/45;
-				let smallHeight = img.height/ratio;
-				doc.addImage(c.toDataURL(), 'JPEG', 224, 106+(100-smallHeight)/2, 45, smallHeight);
-			}
-		}
+        let ratio = img.width / 45;
+        let smallHeight = img.height / ratio;
+        doc.addImage(c.toDataURL(), 'JPEG', 224, 106 + (100 - smallHeight) / 2, 45, smallHeight);
+    }
+}
 
 		try {
 			doc.save('keys.pdf');

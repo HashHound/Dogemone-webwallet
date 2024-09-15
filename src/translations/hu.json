@@ -1,7 +1,7 @@
 {
   "website":{
-	"title":"Karbo tárca",
-	"description":"A Karbo hivatalos online tárcája - névtelen, biztonságos és teljes mértékben böngészőből kezelt az optimális biztonság érdekében"
+	"title":"Dogemone tárca",
+	"description":"A Dogemone hivatalos online tárcája - névtelen, biztonságos és teljes mértékben böngészőből kezelt az optimális biztonság érdekében"
   },
   "messages": {
 	"menu": {
@@ -64,8 +64,8 @@
 	  "github": "GitHub"
 	},
 	"homepage": {
-	  "mainTitle": "Üdvözöljük a Karbo tárca",
-	  "tagLine": "A Karbo használatának legegyszerűbb módja - bárhol és bármikor",
+	  "mainTitle": "Üdvözöljük a Dogemone tárca",
+	  "tagLine": "A Dogemone használatának legegyszerűbb módja - bárhol és bármikor",
 	  "actions": {
 		"loadWallet": "Tárca betöltése",
 		"importWallet": "Tárcaimportálás",
@@ -109,7 +109,7 @@
 		"emptyWallet": "Jelenleg nincsen egyenleged ebben a tárcában.",
 		"waitSync": "Kérlek, várj, míg a tárca naprakész lesz",
 		"beReallyPatient": "A kezdeti beállítás némi időbe telhet...",
-		"getCoinAddress": "KRB fogadása"
+		"getCoinAddress": "DME fogadása"
 	  },
 	  "txDetails":{
 		"title":"Tranzakciórészletek",
@@ -146,7 +146,7 @@
 	  },
 	  "finalizationStep":{
 		"title":"Ez egyszerű volt. A számlád rendelkezésre áll!",
-		"subtitle":"Állj készen a Karbo használatára",
+		"subtitle":"Állj készen a Dogemone használatára",
 		"passwordSelectionBlock":{
 		  "label":"Védd a tárcád"
 		},
@@ -170,7 +170,7 @@
 	  },
 	  "disclaimerBlock":{
 		"title":"A MasariWallet használatának kockázatai",
-		"content":"A KarboWallet egy webes felület, mely lehetővé teszi a Karbo használatát teljes csomópont futtatása nélkül.<br/>Kezeld úgy a KarboWalletet, mintha az a valódi pénztárcád lenne."
+		"content":"A DogemoneWallet egy webes felület, mely lehetővé teszi a Dogemone használatát teljes csomópont futtatása nélkül.<br/>Kezeld úgy a DogemoneWalletet, mintha az a valódi pénztárcád lenne."
 	  }
 	},
 	"donatePage":{
@@ -181,8 +181,8 @@
 		"content":"A webtárcát Gnock fejleszti szabadidejében.<br/>Ha szeretnéd segíteni a fejlesztést, a szerverek fizetését és tetszik az applikáció, úgy vedd fontolóra az adományozást:<br/><br/>"
 	  },
 	  "devFundBlock":{
-		"title":"Karbo fejlesztési alap",
-		"content":"Ha szeretnél segíteni a Karbonak, az alábbi címekre adományozhatsz"
+		"title":"Dogemone fejlesztési alap",
+		"content":"Ha szeretnél segíteni a Dogemonenak, az alábbi címekre adományozhatsz"
 	  }
 	},
 	"supportPage":{
@@ -191,7 +191,7 @@
 	  "getInTouchBlock":{
 		"title":"Lépjünk kapcsolatba!",
 		"content":"Ha bármilyen problémája van a pénztárcájával, forduljon hozzánk!",
-		"discord":"Karbo Discord-csatorna"
+		"discord":"Dogemone Discord-csatorna"
 	  }
 	},
 	"forgotPasswordPage":{
@@ -203,7 +203,7 @@
 	},
 	"networkPage":{
 	  "title":"Hálózati statisztika",
-	  "subtitle":"Betekintés a Karbo hálózatába",
+	  "subtitle":"Betekintés a Dogemone hálózatába",
 	  "statsBlock":{
 		"hashrate":"Hálózati hashrate",
 		"height":"Blokklánc hossza",
@@ -213,7 +213,7 @@
 	  }
 	},
 	"sendPage":{
-	  "title":"KRB küldése",
+	  "title":"DME küldése",
 	  "sendBlock":{
 		"address":{
 		  "label":"Kedvezményezett címe",
@@ -248,7 +248,7 @@
 	  },
 	  "thankYouDonationModal":{
 		"title":"Köszönjük az adományt!",
-		"content":"Értékeljük a segítséged.<br/>Ez az adomány is segít jobbá tenni a Karbot.",
+		"content":"Értékeljük a segítséged.<br/>Ez az adomány is segít jobbá tenni a Dogemonet.",
 		"confirmText":"OK"
 	  },
 	  "transferSentModal":{
@@ -285,7 +285,7 @@
 	  }
 	},
 	"receivePage":{
-	  "title":"KRB fogadása",
+	  "title":"DME fogadása",
 	  "receiveBlock":{
 		"address":{
 		  "title":"Pénz fogadására szolgáló cím:",
@@ -313,7 +313,7 @@
 	},
 	"miningPage":{
 	  "title":"Bányássz közvetlenül böngészőből",
-	  "subtitle":"Támogasd a hálózatot a bányászással és szerezz érte jutalmat Karboban",
+	  "subtitle":"Támogasd a hálózatot a bányászással és szerezz érte jutalmat Dogemoneban",
 	  "parameterBlock":{
 		"title":"Paraméterek",
 		"labelDestinationAddress":"Céltárca",
