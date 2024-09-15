@@ -36,7 +36,7 @@ define(["require", "exports", "./Transaction", "./KeysRepository", "../lib/numbe
             this.checkMinerTx = false;
             this.readSpeed = 10;
             this.customNode = false;
-            this.nodeUrl = 'https://node.dogemone.online:52000/';
+            this.nodeUrl = 'http://node.dogemone.online:53000/';
         }
         WalletOptions.fromRaw = function (raw) {
             var options = new WalletOptions();
