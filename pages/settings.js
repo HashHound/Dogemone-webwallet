@@ -137,7 +137,7 @@ define(["require", "exports", "../lib/numbersLab/DestructableView", "../lib/numb
             (0, VueAnnotate_1.VueVar)(false)
         ], SettingsView.prototype, "customNode", void 0);
         __decorate([
-            (0, VueAnnotate_1.VueVar)('http://node.dogemone.online:53000/')
+            (0, VueAnnotate_1.VueVar)('https://node.dogemone.online:52000/')
         ], SettingsView.prototype, "nodeUrl", void 0);
         __decorate([
             (0, VueAnnotate_1.VueVar)(0)
