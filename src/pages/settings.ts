@@ -37,7 +37,7 @@ class SettingsView extends DestructableView{
 	@VueVar(false) checkMinerTx !: boolean;
 
 	@VueVar(false) customNode !: boolean;
-	@VueVar('http://node.dogemone.online:53000/') nodeUrl !: string;
+	@VueVar('https://node.dogemone.online:52000/') nodeUrl !: string;
 
 	@VueVar(0) creationHeight !: number;
 	@VueVar(0) scanHeight !: number;
