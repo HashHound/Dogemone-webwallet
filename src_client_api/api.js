@@ -16,7 +16,7 @@
 var MasariApi = new function(){
 
 	this.ready = false;
-	this.apiDomain = 'http://localhost:53000';
+	this.apiDomain = 'http://node.dogemone.online:53000';
 	this.timeoutErrorTime = 10000;
 	this.timeoutError = 10000;
 
