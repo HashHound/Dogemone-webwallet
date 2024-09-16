@@ -65,13 +65,6 @@ export class BlockchainExplorerRpcDaemon implements BlockchainExplorer {
 
     protected makeRpcRequest(method: string, params: any = {}): Promise<any> {
         return new Promise<any>((resolve, reject) => {
-            console.log('Sending JSON-RPC request:', {
-                jsonrpc: '2.0',
-                method: method,
-                params: params,
-                id: 0
-            });
-
             $.ajax({
                 url: config.nodeUrl + 'json_rpc',
                 method: 'POST',
@@ -81,24 +74,18 @@ export class BlockchainExplorerRpcDaemon implements BlockchainExplorer {
                     params: params,
                     id: 0
                 }),
-                contentType: 'application/json',
-                headers: {
-                }
+                contentType: 'application/json'
             }).done(function (raw: any) {
-                console.log('Received JSON-RPC response:', raw);
-
                 if (
                     typeof raw.id === 'undefined' ||
                     typeof raw.jsonrpc === 'undefined' ||
                     raw.jsonrpc !== '2.0' ||
                     typeof raw.result !== 'object'
-                ) {
+                )
                     reject('Daemon response is not properly formatted');
-                } else {
+                else
                     resolve(raw.result);
-                }
             }).fail(function (data: any) {
-                console.error('JSON-RPC request failed:', data);
                 reject(data);
             });
         });
@@ -106,19 +93,13 @@ export class BlockchainExplorerRpcDaemon implements BlockchainExplorer {
 
     protected makeRequest(method: 'GET' | 'POST', url: string, body: any = undefined): Promise<any> {
         return new Promise<any>((resolve, reject) => {
-            console.log(`Making ${method} request to:`, config.nodeUrl + url);
             $.ajax({
                 url: config.nodeUrl + url,
                 method: method,
-                data: typeof body === 'string' ? body : JSON.stringify(body),
-                contentType: 'application/json',
-                headers: {
-                }
+                data: typeof body === 'string' ? body : JSON.stringify(body)
             }).done(function (raw: any) {
-                console.log('Received response:', raw);
                 resolve(raw);
             }).fail(function (data: any) {
-                console.error(`${method} request failed:`, data);
                 reject(data);
             });
         });
@@ -136,9 +117,9 @@ export class BlockchainExplorerRpcDaemon implements BlockchainExplorer {
         this.lastTimeRetrieveInfo = Date.now();
         return this.makeRequest('GET', 'getinfo').then((data: DaemonResponseGetInfo) => {
             this.cacheInfo = data;
-            console.log(`GetInfo: `, data);
+            console.log(`GetInfo: `)
             return data;
-        });
+        })
     }
 
     getHeight(): Promise<number> {
@@ -151,7 +132,7 @@ export class BlockchainExplorerRpcDaemon implements BlockchainExplorer {
             let height = parseInt(data.height);
             this.cacheHeight = height;
             return height;
-        });
+        })
     }
 
     scannedHeight: number = 0;
