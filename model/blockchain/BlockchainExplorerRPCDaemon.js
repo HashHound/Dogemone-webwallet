@@ -33,6 +33,12 @@ define(["require", "exports", "../WalletWatchdog"], function (require, exports, 
         BlockchainExplorerRpcDaemon.prototype.makeRpcRequest = function (method, params) {
             if (params === void 0) { params = {}; }
             return new Promise(function (resolve, reject) {
+                console.log('Sending JSON-RPC request:', {
+                    jsonrpc: '2.0',
+                    method: method,
+                    params: params,
+                    id: 0
+                });
                 $.ajax({
                     url: config.nodeUrl + 'json_rpc',
                     method: 'POST',
@@ -42,16 +48,23 @@ define(["require", "exports", "../WalletWatchdog"], function (require, exports, 
                         params: params,
                         id: 0
                     }),
-                    contentType: 'application/json'
+                    contentType: 'application/json',
+                    headers: {
+                        'Origin': 'https://wallet.dogemone.online'
+                    }
                 }).done(function (raw) {
+                    console.log('Received JSON-RPC response:', raw);
                     if (typeof raw.id === 'undefined' ||
                         typeof raw.jsonrpc === 'undefined' ||
                         raw.jsonrpc !== '2.0' ||
-                        typeof raw.result !== 'object')
+                        typeof raw.result !== 'object') {
                         reject('Daemon response is not properly formatted');
-                    else
+                    }
+                    else {
                         resolve(raw.result);
+                    }
                 }).fail(function (data) {
+                    console.error('JSON-RPC request failed:', data);
                     reject(data);
                 });
             });
@@ -59,13 +72,20 @@ define(["require", "exports", "../WalletWatchdog"], function (require, exports, 
         BlockchainExplorerRpcDaemon.prototype.makeRequest = function (method, url, body) {
             if (body === void 0) { body = undefined; }
             return new Promise(function (resolve, reject) {
+                console.log("Making ".concat(method, " request to:"), config.nodeUrl + url);
                 $.ajax({
                     url: config.nodeUrl + url,
                     method: method,
-                    data: typeof body === 'string' ? body : JSON.stringify(body)
+                    data: typeof body === 'string' ? body : JSON.stringify(body),
+                    contentType: 'application/json',
+                    headers: {
+                        'Origin': 'https://wallet.dogemone.online'
+                    }
                 }).done(function (raw) {
+                    console.log('Received response:', raw);
                     resolve(raw);
                 }).fail(function (data) {
+                    console.error("".concat(method, " request failed:"), data);
                     reject(data);
                 });
             });
@@ -78,7 +98,7 @@ define(["require", "exports", "../WalletWatchdog"], function (require, exports, 
             this.lastTimeRetrieveInfo = Date.now();
             return this.makeRequest('GET', 'getinfo').then(function (data) {
                 _this.cacheInfo = data;
-                console.log("GetInfo: ");
+                console.log("GetInfo: ", data);
                 return data;
             });
         };
