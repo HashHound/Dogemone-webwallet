@@ -1,6 +1,6 @@
 {
   "website":{
-	"title":"Portfel Dogemonewańca",
+	"title":"Portfel Dogemone",
 	"description":"Oficjalny portfel online dla waluty Dogemonewaniec - anonimowy, zabezpieczony i w pełni obsługiwany w przeglądarce w celu zapewnienia optymalnego bezpieczeństwa"
   },
   "messages": {
@@ -63,8 +63,8 @@
 	  "github": "GitHub"
 	},
 	 "homepage": {
-	    "mainTitle": "Witamy w portfelu Dogemonewańca",
-	    "tagLine": "Najprostrzy sposób na używanie Dogemonewańca - wszędzie o każdej porze",
+	    "mainTitle": "Witamy w portfelu Dogemone",
+	    "tagLine": "Najprostrzy sposób na używanie Dogemone - wszędzie o każdej porze",
 	    "actions": {
 	    "loadWallet": "Otwórz mój portfel",
 	    "importWallet": "Zaimportuj portfel",
@@ -145,7 +145,7 @@
 	  },
 	  "finalizationStep":{
 		"title":"To było proste. Twoje konto jest gotowe!",
-		"subtitle":"Bądź gotowy do użycia Dogemonewańca, jak nigdy dotąd",
+		"subtitle":"Bądź gotowy do użycia Dogemone, jak nigdy dotąd",
 		"passwordSelectionBlock":{
 		  "label":"Chroń swój portfel"
 		},
@@ -168,8 +168,8 @@
 		}
   },
     "disclaimerBlock":{
-		"title":"Ryzyko użycia Portfela Dogemonewańca",
-		"content":"Portfel Dogemonewańca jest interfejsem internetowym. Pomaga ci używać Dogemonewaniec bez uruchamiania pełnego węzła. <br/>Zalecamy traktowanie tego portfela tak, jakbyś traktował swój rzeczywisty portfel."
+		"title":"Ryzyko użycia Portfela Dogemone",
+		"content":"Portfel Dogemone jest interfejsem internetowym. Pomaga ci używać Dogemonewaniec bez uruchamiania pełnego węzła. <br/>Zalecamy traktowanie tego portfela tak, jakbyś traktował swój rzeczywisty portfel."
 	  }
   },
   "donatePage":{
@@ -180,7 +180,7 @@
     "content":"Jeśli chcesz pomóc w rozwoju, np. pomóc zapłacić za serwery czy podoba ci się ta aplikacja, rozważ darowiznę: <br/><br/>"
   },
     "DogemoneFundBlock":{
-      "title":"Fundusz rozwoju Dogemonewańca",
+      "title":"Fundusz rozwoju Dogemone",
       "content":"Aby wspomóc Dogemonewaniec, możesz przekazać darowiznę na te adresy"
   }
   },
@@ -202,7 +202,7 @@
 	},
   "networkPage":{
     "title":"Statystki Sieci",
-    "subtitle":"Informacja o sieci Dogemonewańca",
+    "subtitle":"Informacja o sieci Dogemone",
     "statsBlock":{
       "connectNode": "Podłączony do",
 	  "hashrate":"Prędkość sieci",

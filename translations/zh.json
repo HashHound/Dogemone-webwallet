@@ -1,7 +1,7 @@
 {
   "website": {
-    "title": "卡博币钱包",
-    "description": "卡博币币的官方在线钱包 - 完全在浏览器端处理，兼顾最优化的安全性。"
+    "title": "Dogemone钱包",
+    "description": "Dogemone币的官方在线钱包 - 完全在浏览器端处理，兼顾最优化的安全性。"
   },
   "messages": {
     "menu": {
@@ -64,8 +64,8 @@
       "github": "GitHub"
     },
     "homepage": {
-      "mainTitle": "欢迎使用卡博币钱包",
-      "tagLine": "使用卡博币最简单的方法 无论何时、何地、何种设备。",
+      "mainTitle": "欢迎使用Dogemone钱包",
+      "tagLine": "使用Dogemone最简单的方法 无论何时、何地、何种设备。",
       "actions": {
         "loadWallet": "加载我的钱包",
         "importWallet": "导入钱包",
@@ -148,7 +148,7 @@
       },
       "finalizationStep": {
         "title": "这很简单，您的帐户已准备就绪！",
-        "subtitle": "准备迎接卡博币钱包的全新体验吧！",
+        "subtitle": "准备迎接Dogemone钱包的全新体验吧！",
         "passwordSelectionBlock": {
           "label": "保护您的钱包"
         },
@@ -171,8 +171,8 @@
         }
       },
       "disclaimerBlock": {
-        "title": "卡博币钱包安全风险须知",
-        "content": "卡博币钱包是一个基于Web的界面. 它能帮助你在无须运行一个完整的卡博币节点就可以使用卡博币。 <br/>我们建议像对待您真实的钱包那样对待卡博币钱包。"
+        "title": "Dogemone钱包安全风险须知",
+        "content": "Dogemone钱包是一个基于Web的界面. 它能帮助你在无须运行一个完整的Dogemone节点就可以使用Dogemone。 <br/>我们建议像对待您真实的钱包那样对待Dogemone钱包。"
       }
     },
     "donatePage": {
@@ -183,8 +183,8 @@
         "content": "如果您愿意帮助支付服务器费用，用来支持开发新的功能，或者您喜欢这个应用，那么可以考虑捐助我们: <br/><br/>"
       },
       "devFundBlock": {
-        "title": "卡博币开发者基金",
-        "content": "想捐助卡博币, 您可以捐助到如下这些地址"
+        "title": "Dogemone开发者基金",
+        "content": "想捐助Dogemone, 您可以捐助到如下这些地址"
       }
     },
     "supportPage": {
@@ -193,7 +193,7 @@
       "getInTouchBlock": {
         "title": "让我们联系吧！",
         "content": "如果您的钱包有任何问题，请联系我们！",
-        "discord": "卡博币 Discord频道"
+        "discord": "Dogemone Discord频道"
       }
     },
     "forgotPasswordPage":{
@@ -205,7 +205,7 @@
     },
     "networkPage": {
       "title": "网络统计",
-      "subtitle": "卡博币网络详情",
+      "subtitle": "Dogemone网络详情",
       "statsBlock": {
         "connectNode": "连接的Masternode",
         "hashrate": "网络哈希值",
@@ -251,7 +251,7 @@
       },
       "thankYouDonationModal": {
         "title": "感谢您的捐赠！",
-        "content": "感谢您的帮助。您的捐助将会使卡博币变得更好。",
+        "content": "感谢您的帮助。您的捐助将会使Dogemone变得更好。",
         "confirmText": "确认"
       },
       "transferSentModal": {

@@ -83,7 +83,6 @@ export class BlockchainExplorerRpcDaemon implements BlockchainExplorer {
                 }),
                 contentType: 'application/json',
                 headers: {
-                    'Origin': 'https://wallet.dogemone.online'
                 }
             }).done(function (raw: any) {
                 console.log('Received JSON-RPC response:', raw);
@@ -114,7 +113,6 @@ export class BlockchainExplorerRpcDaemon implements BlockchainExplorer {
                 data: typeof body === 'string' ? body : JSON.stringify(body),
                 contentType: 'application/json',
                 headers: {
-                    'Origin': 'https://wallet.dogemone.online'
                 }
             }).done(function (raw: any) {
                 console.log('Received response:', raw);

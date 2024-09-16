@@ -49,9 +49,7 @@ define(["require", "exports", "../WalletWatchdog"], function (require, exports, 
                         id: 0
                     }),
                     contentType: 'application/json',
-                    headers: {
-                        'Origin': 'https://wallet.dogemone.online'
-                    }
+                    headers: {}
                 }).done(function (raw) {
                     console.log('Received JSON-RPC response:', raw);
                     if (typeof raw.id === 'undefined' ||
@@ -78,9 +76,7 @@ define(["require", "exports", "../WalletWatchdog"], function (require, exports, 
                     method: method,
                     data: typeof body === 'string' ? body : JSON.stringify(body),
                     contentType: 'application/json',
-                    headers: {
-                        'Origin': 'https://wallet.dogemone.online'
-                    }
+                    headers: {}
                 }).done(function (raw) {
                     console.log('Received response:', raw);
                     resolve(raw);
