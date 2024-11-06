@@ -30,7 +30,6 @@
  *     NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  *     SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-import { debounce } from './utils/helper';
 
 export class TransactionOut {
     amount: number = 0;
@@ -51,28 +50,27 @@ export class TransactionOut {
         nout.globalIndex = raw.globalIndex;
         nout.amount = raw.amount;
 
-        if (raw.ephemeralPub) nout.ephemeralPub = raw.ephemeralPub;
-        if (raw.pubKey) nout.pubKey = raw.pubKey;
-        if (raw.rtcOutPk) nout.rtcOutPk = raw.rtcOutPk;
-        if (raw.rtcMask) nout.rtcMask = raw.rtcMask;
-        if (raw.rtcAmount) nout.rtcAmount = raw.rtcAmount;
+        if (typeof raw.ephemeralPub !== 'undefined') nout.ephemeralPub = raw.ephemeralPub;
+        if (typeof raw.pubKey !== 'undefined') nout.pubKey = raw.pubKey;
+        if (typeof raw.rtcOutPk !== 'undefined') nout.rtcOutPk = raw.rtcOutPk;
+        if (typeof raw.rtcMask !== 'undefined') nout.rtcMask = raw.rtcMask;
+        if (typeof raw.rtcAmount !== 'undefined') nout.rtcAmount = raw.rtcAmount;
 
         return nout;
     }
 
     export() {
-        // Only add properties if they have values to reduce data size
         let data: any = {
             keyImage: this.keyImage,
             outputIdx: this.outputIdx,
             globalIndex: this.globalIndex,
             amount: this.amount,
         };
-        if (this.rtcOutPk) data.rtcOutPk = this.rtcOutPk;
-        if (this.rtcMask) data.rtcMask = this.rtcMask;
-        if (this.rtcAmount) data.rtcAmount = this.rtcAmount;
-        if (this.ephemeralPub) data.ephemeralPub = this.ephemeralPub;
-        if (this.pubKey) data.pubKey = this.pubKey;
+        if (this.rtcOutPk !== '') data.rtcOutPk = this.rtcOutPk;
+        if (this.rtcMask !== '') data.rtcMask = this.rtcMask;
+        if (this.rtcAmount !== '') data.rtcAmount = this.rtcAmount;
+        if (this.ephemeralPub !== '') data.ephemeralPub = this.ephemeralPub;
+        if (this.pubKey !== '') data.pubKey = this.pubKey;
 
         return data;
     }
@@ -80,6 +78,7 @@ export class TransactionOut {
 
 export class TransactionIn {
     keyImage: string = '';
+    //if < 0, means the in has been seen but not checked (view only wallet)
     amount: number = 0;
 
     static fromRaw(raw: any) {
@@ -111,30 +110,33 @@ export class Transaction {
 
     is_coinbase: boolean = false;
 
-    // Cached amount to avoid recalculating
-    private cachedAmount: number | null = null;
-
     static fromRaw(raw: any) {
         let transac = new Transaction();
-        Object.assign(transac, {
-            blockHeight: raw.blockHeight,
-            txPubKey: raw.txPubKey,
-            timestamp: raw.timestamp,
-            paymentId: raw.paymentId || '',
-            fees: raw.fees || 0,
-            hash: raw.hash || '',
-            is_coinbase: raw.is_coinbase || false,
-        });
-
-        // Use map for concise array transformations
-        transac.ins = (raw.ins || []).map(TransactionIn.fromRaw);
-        transac.outs = (raw.outs || []).map(TransactionOut.fromRaw);
-
+        transac.blockHeight = raw.blockHeight;
+        transac.txPubKey = raw.txPubKey;
+        transac.timestamp = raw.timestamp;
+        if (typeof raw.ins !== 'undefined') {
+            let ins: TransactionIn[] = [];
+            for (let rin of raw.ins) {
+                ins.push(TransactionIn.fromRaw(rin));
+            }
+            transac.ins = ins;
+        }
+        if (typeof raw.outs !== 'undefined') {
+            let outs: TransactionOut[] = [];
+            for (let rout of raw.outs) {
+                outs.push(TransactionOut.fromRaw(rout));
+            }
+            transac.outs = outs;
+        }
+        if (typeof raw.paymentId !== 'undefined') transac.paymentId = raw.paymentId;
+        if (typeof raw.fees !== 'undefined') transac.fees = raw.fee;
+        if (typeof raw.hash !== 'undefined') transac.hash = raw.hash;
+        if (typeof raw.is_coinbase !== 'undefined') transac.is_coinbase = raw.is_coinbase;
         return transac;
     }
 
     export() {
-        // Only include non-default fields to optimize serialization
         let data: any = {
             blockHeight: this.blockHeight,
             txPubKey: this.txPubKey,
@@ -142,18 +144,26 @@ export class Transaction {
             hash: this.hash,
             is_coinbase: this.is_coinbase,
         };
-        if (this.ins.length > 0) data.ins = this.ins.map(nin => nin.export());
-        if (this.outs.length > 0) data.outs = this.outs.map(nout => nout.export());
-        if (this.paymentId) data.paymentId = this.paymentId;
-        if (this.fees) data.fees = this.fees;
-
+        if (this.ins.length > 0) {
+            let rins: any[] = [];
+            for (let nin of this.ins) {
+                rins.push(nin.export());
+            }
+            data.ins = rins;
+        }
+        if (this.outs.length > 0) {
+            let routs: any[] = [];
+            for (let nout of this.outs) {
+                routs.push(nout.export());
+            }
+            data.outs = routs;
+        }
+        if (this.paymentId !== '') data.paymentId = this.paymentId;
+        if (this.fees !== 0) data.fees = this.fees;
         return data;
     }
 
-    // Caching the amount for faster future calls
     getAmount() {
-        if (this.cachedAmount !== null) return this.cachedAmount;
-
         let amount = 0;
         for (let out of this.outs) {
             amount += out.amount;
@@ -161,19 +171,7 @@ export class Transaction {
         for (let nin of this.ins) {
             amount -= nin.amount;
         }
-        this.cachedAmount = amount;
         return amount;
-    }
-
-    // When modifying outs or ins, reset the cached amount
-    addOutput(output: TransactionOut) {
-        this.outs.push(output);
-        this.cachedAmount = null;
-    }
-
-    addInput(input: TransactionIn) {
-        this.ins.push(input);
-        this.cachedAmount = null;
     }
 
     isCoinbase() {
@@ -181,42 +179,20 @@ export class Transaction {
     }
 
     isConfirmed(blockchainHeight: number) {
-        return this.isCoinbase() && this.blockHeight + config.txCoinbaseMinConfirms < blockchainHeight
-            || !this.isCoinbase() && this.blockHeight + config.txMinConfirms < blockchainHeight;
+        if (this.isCoinbase() && this.blockHeight + config.txCoinbaseMinConfirms < blockchainHeight) {
+            return true;
+        } else if (!this.isCoinbase() && this.blockHeight + config.txMinConfirms < blockchainHeight) {
+            return true;
+        }
+        return false;
     }
 
     isFullyChecked() {
-        if (this.getAmount() === 0) return false; // Fusion transaction case
-        return this.ins.every(input => input.amount >= 0);
+        if (this.getAmount() === 0) return false; //fusion
+        for (let input of this.ins) {
+            if (input.amount < 0)
+                return false;
+        }
+        return true;
     }
-}
-
-// Debounced function for handling large amount input
-const handleLargeAmountInput = debounce((amount: number) => {
-    console.log("Debounced amount processing:", amount);
-    // Place additional logic here, like updating state or performing calculations
-}, 300);
-
-// Attach to the amount input field in your UI
-const amountInput = document.getElementById("amountInput") as HTMLInputElement;
-if (amountInput) {
-    amountInput.addEventListener("input", (event: Event) => {
-        const amount = parseFloat((event.target as HTMLInputElement).value);
-        handleLargeAmountInput(amount);
-    });
-}
-
-// Debounced function for filtering transactions
-const filterTransactions = debounce((filterValue: string) => {
-    console.log("Debounced filter:", filterValue);
-    // Implement filtering logic for transactions here
-}, 300);
-
-// Example usage with a search input field for transactions
-const transactionSearchInput = document.getElementById("transactionSearch") as HTMLInputElement;
-if (transactionSearchInput) {
-    transactionSearchInput.addEventListener("input", (event: Event) => {
-        const filterValue = (event.target as HTMLInputElement).value;
-        filterTransactions(filterValue);
-    });
 }
