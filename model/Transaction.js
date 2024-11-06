@@ -30,7 +30,7 @@
  *     NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  *     SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- define(["require", "exports", "./utils/helper"], function (require, exports, helper) {
+ define(["require", "exports", "../utils/helper"], function (require, exports, helper) {
      "use strict";
      Object.defineProperty(exports, "__esModule", { value: true });
      exports.Transaction = exports.TransactionIn = exports.TransactionOut = void 0;
